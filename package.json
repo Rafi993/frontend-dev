@@ -1,6 +1,14 @@
 {
   "name": "frontend-dev",
+  "description": "cli to add developer tools to your front end repo",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "bin": "./index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Rafi993",
+  "dependencies": {},
+  "devDependencies": {}
 }
