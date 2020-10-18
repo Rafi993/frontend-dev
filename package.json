@@ -1,13 +1,26 @@
 {
   "name": "frontend-dev",
   "description": "cli to add developer tools to your front end repo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "bin": "./index.js",
   "license": "MIT",
   "scripts": {
     "start": "node index.js"
   },
+  "keywords": [
+    "js",
+    "frontend",
+    "devloper-tooling"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafi993/frontend-dev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Rafi993/frontend-dev/issues"
+  },
+  "homepage": "https://github.com/Rafi993/frontend-dev#readme",
   "author": "Rafi993",
   "dependencies": {},
   "devDependencies": {}
