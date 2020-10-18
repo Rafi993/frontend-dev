@@ -21,13 +21,9 @@ const packages =
 
 // Install packages
 if (yarn) {
-  childProcess.execSync(`yarn add ${packages} -D`, {
-    stdio: [process.stdin, process.stdout, process.stder],
-  });
+  childProcess.execSync(`yarn add ${packages} -D`, { stdio: 'inherit' });
 } else {
-  childProcess.execSync(`npm install ${packages} -D`, {
-    stdio: [process.stdin, process.stdout, process.stder],
-  });
+  childProcess.execSync(`npm install ${packages} -D`, { stdio: 'inherit' });
 }
 
 fs.copyFileSync(path.join(__dirname, '.eslintrc.js'), '.eslintrc.js');
