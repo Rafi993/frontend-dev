@@ -1,4 +1,7 @@
+/* eslint-env node */
+
 const fs = require('fs');
+const path = require('path');
 const childProcess = require('child_process');
 
 let yarn = false;
@@ -25,54 +28,8 @@ if (yarn) {
   });
 }
 
-// Create .eslintrc.js
-fs.writeFileSync(
-  '.eslintrc.js',
-  `module.exports = {
-    extends: ['eslint:recommended', 'prettier'],
-    plugins: ['prettier'],
-   };`,
-);
-
-// Create .stylelintrc.json
-fs.writeFileSync(
-  '.stylelintrc.json',
-  `{
-    "extends": "stylelint-config-standard"
-   }`,
-);
-
-// Creating .huskyrc
-fs.writeFileSync(
-  '.huskyrc',
-  `{
-    "hooks":{
-       "pre-commit": "lint-staged"
-    }
-   }`,
-);
-
-// Creating .lintstagedrc
-fs.writeFileSync(
-  '.lintstagedrc',
-  `{
-        "*.js": [
-          "eslint --fix",
-          "prettier --write"
-        ],
-        "*.{css,scss}": [
-            "stylelint"
-        ]
-   }`,
-);
-
-// Creating .prettierrc
-fs.writeFileSync(
-  '.prettierrc',
-  `{
-    "singleQuote": true,
-    "trailingComma": "all",
-    "printWidth": 80,
-    "tabWidth": 4
-   }`,
-);
+fs.copyFileSync(path.join(__dirname, '.eslintrc.js'), '.eslintrc.js');
+fs.copyFileSync(path.join(__dirname, '.stylelintrc.json'), '.stylelintrc.json');
+fs.copyFileSync(path.join(__dirname, '.huskyrc'), '.huskyrc');
+fs.copyFileSync(path.join(__dirname, '.lintstagedrc'), '.lintstagedrc');
+fs.copyFileSync(path.join(__dirname, '.prettierrc'), '.prettierrc');
