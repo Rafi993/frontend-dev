@@ -1,9 +1,7 @@
 {
   "*.js": [
     "eslint --fix",
-    "prettier --write"
-  ],
-  "*.{css,scss}": [
-    "stylelint"
+    "prettier --write",
+    "jest --findRelatedTests"
   ]
 }

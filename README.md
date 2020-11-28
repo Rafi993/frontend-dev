@@ -11,3 +11,9 @@ Navigate inside your repo and run
 ```bash
 $ npx frontend-dev
 ```
+
+It detects if you are using npm are yarn and uses appropriate package manager.
+
+### options
+* **--jest** or **-j** add jest to pre-commit hook
+* **--css** or **-c** add style linting
