@@ -1,7 +1,7 @@
 {
   "name": "frontend-dev",
   "description": "cli to add developer tools to your front end repo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "bin": "./index.js",
   "license": "MIT",
@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/Rafi993/frontend-dev#readme",
   "author": "Rafi993",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "yargs": "^16.1.1"
-  }
+  },
+  "devDependencies": {}
 }
